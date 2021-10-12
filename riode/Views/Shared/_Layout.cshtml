@@ -271,45 +271,45 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="product.html">Products</a>
+                                    <a asp-controller="Products" asp-action="Index">Products</a>
                                     <div class="megamenu">
                                         <div class="row">
                                             <div class="col-6 col-sm-4 col-md-3 col-lg-4">
                                                 <h4 class="menu-title">Product Pages</h4>
                                                 <ul>
-                                                    <li><a href="product-simple.html">Simple Product</a></li>
-                                                    <li><a href="product.html">Variable Product</a></li>
-                                                    <li><a href="product-sale.html">Sale Product</a></li>
-                                                    <li><a href="product-featured.html">Featured &amp; On Sale</a></li>
+                                                    <li><a asp-controller="Products" asp-action="SimpleProduct">Simple Product</a></li>
+                                                    <li><a asp-controller="Products" asp-action="Index">Variable Product</a></li>
+                                                    <li><a asp-controller="Products" asp-action="SaleProduct">Sale Product</a></li>
+                                                    <li><a asp-controller="Products" asp-action="FeaturedAndOnSale">Featured &amp; On Sale</a></li>
 
-                                                    <li><a href="product-left-sidebar.html">With Left Sidebar</a></li>
-                                                    <li><a href="product-right-sidebar.html">With Right Sidebar</a></li>
+                                                    <li><a asp-controller="Products" asp-action="WithLeftSidebar">With Left Sidebar</a></li>
+                                                    <li><a asp-controller="Products" asp-action="WithRightSidebar">With Right Sidebar</a></li>
                                                     <li>
-                                                        <a href="product-sticky-cart.html">
+                                                        <a asp-controller="Products" asp-action="AddCartSticky">
                                                             Add Cart Sticky<span class="tip tip-hot">Hot</span>
                                                         </a>
                                                     </li>
-                                                    <li><a href="product-tabinside.html">Tab Inside</a></li>
+                                                    <li><a asp-controller="Products" asp-action="TabInside">Tab Inside</a></li>
                                                 </ul>
                                             </div>
                                             <div class="col-6 col-sm-4 col-md-3 col-lg-4">
                                                 <h4 class="menu-title">Product Layouts</h4>
                                                 <ul>
                                                     <li>
-                                                        <a href="product-grid.html">
+                                                        <a asp-controller="Products" asp-action="GridImages">
                                                             Grid Images<span class="tip tip-new">New</span>
                                                         </a>
                                                     </li>
-                                                    <li><a href="product-masonry.html">Masonry</a></li>
-                                                    <li><a href="product-gallery.html">Gallery Type</a></li>
-                                                    <li><a href="product-full.html">Full Width Layout</a></li>
-                                                    <li><a href="product-sticky.html">Sticky Info</a></li>
+                                                    <li><a asp-controller="Products" asp-action="Masonry">Masonry</a></li>
+                                                    <li><a asp-controller="Products" asp-action="GalleryType">Gallery Type</a></li>
+                                                    <li><a asp-controller="Products" asp-action="FullWidthLayout">Full Width Layout</a></li>
+                                                    <li><a asp-controller="Products" asp-action="StickyInfo">Sticky Info</a></li>
                                                     <li>
-                                                        <a href="product-sticky-both.html">Left &amp; Right Sticky</a>
+                                                        <a asp-controller="Products" asp-action="LeftAndRightSticky">Left &amp; Right Sticky</a>
                                                     </li>
-                                                    <li><a href="product-horizontal.html">Horizontal Thumb</a></li>
+                                                    <li><a asp-controller="Products" asp-action="HorizontalThumb">Horizontal Thumb</a></li>
 
-                                                    <li><a href="#">Build Your Own</a></li>
+                                                    <li><a asp-controller="Products" asp-action="BuildYourOwn">Build Your Own</a></li>
                                                 </ul>
                                             </div>
                                             <div class="col-6 col-sm-4 col-md-3 col-lg-4 menu-banner menu-banner2 banner banner-fixed">
@@ -331,9 +331,9 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="#">Pages</a>
+                                    <a asp-controller="Pages" asp-action="Index">Pages</a>
                                     <ul>
-                                        <li><a href="about-us.html">About</a></li>
+                                        <li><a asp-controller="Pages" asp-action="About">About</a></li>
                                         <li><a href="contact-us.html">Contact Us</a></li>
                                         <li><a href="account.html">My Account</a></li>
                                         <li><a href="wishlist.html">Wishlist</a></li>
