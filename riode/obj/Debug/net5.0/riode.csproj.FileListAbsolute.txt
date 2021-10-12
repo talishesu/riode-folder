@@ -142,3 +142,10 @@ C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Prod
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Products\HorizontalThumb.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Products\BuildYourOwn.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Pages\Index.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Pages\About.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Pages\ContactUs.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Pages\Login.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Pages\Faqs.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Pages\Error404.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Pages\ComingSoon.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Shared\_ComingSoon.cshtml.g.cs
