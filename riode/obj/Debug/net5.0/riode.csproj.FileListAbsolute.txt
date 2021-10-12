@@ -24,8 +24,6 @@ C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\riode.TagHelpers
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\riode.TagHelpers.output.cache
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\riode.RazorCoreGenerate.cache
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs

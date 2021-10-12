@@ -19,15 +19,8 @@ using riode;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "C:\Users\quliy\source\repos\riode-folder\riode\Views\_ViewImports.cshtml"
-using riode.Models;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eded2f5b3550f6a57b9a8bc6da305d9f4f58bb54", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"22ac88b56b9d98d9c511b834047f80a77ea9ab14", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
