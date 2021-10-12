@@ -35,9 +35,10 @@
     <!-- Plugins CSS File -->
     <link rel="stylesheet" type="text/css" href="~/vendor/magnific-popup/magnific-popup.min.css">
     <link rel="stylesheet" type="text/css" href="~/vendor/owl-carousel/owl.carousel.min.css">
-
-    <!-- Main CSS File -->
+    <link rel="stylesheet" type="text/css" href="vendor/nouislider/nouislider.min.css">
     <link rel="stylesheet" type="text/css" href="~/css/demo1.min.css">
+    <!-- Main CSS File -->
+    <link href="~/css/style.min.css" rel="stylesheet" />
 </head>
 
 <body class="home">
@@ -90,7 +91,7 @@
                         <a href="#" class="mobile-menu-toggle">
                             <i class="d-icon-bars2"></i>
                         </a>
-                        <a asp-action="Index" class="logo">
+                        <a asp-controller="Home" asp-action="Index" class="logo">
                             <img src="~/images/logo.png" alt="logo" width="153" height="44" />
                         </a>
                         <!-- End Logo -->
@@ -206,20 +207,20 @@
                         <nav class="main-nav">
                             <ul class="menu">
                                 <li class="active">
-                                    <a asp-action="Index">Home</a>
+                                    <a asp-controller="Home" asp-action="Index">Home</a>
                                 </li>
                                 <li>
-                                    <a href="shop.html">Categories</a>
+                                    <a asp-controller="Categories" asp-action="Index">Categories</a>
                                     <div class="megamenu">
                                         <div class="row">
                                             <div class="col-6 col-sm-4 col-md-3 col-lg-4">
                                                 <h4 class="menu-title">Variations 1</h4>
                                                 <ul>
-                                                    <li><a href="shop-banner-sidebar.html">Banner With Sidebar</a></li>
+                                                    <li><a asp-controller="Categories" asp-action="BannerWithSidebar">Banner With Sidebar</a></li>
                                                     <li><a href="shop-boxed-banner.html">Boxed Banner</a></li>
-                                                    <li><a href="shop-infinite-scroll.html">Infinite Ajaxscroll</a></li>
+                                                    <li><a asp-controller="Categories" asp-action="InfiniteAjaxscroll">Infinite Ajaxscroll</a></li>
                                                     <li>
-                                                        <a href="shop-horizontal-filter.html">Horizontal Filter</a>
+                                                        <a asp-controller="Categories" asp-action="HorizontalFilter">Horizontal Filter</a>
                                                     </li>
                                                     <li>
                                                         <a href="shop-navigation-filter.html">
@@ -227,8 +228,8 @@
                                                         </a>
                                                     </li>
 
-                                                    <li><a href="shop-off-canvas.html">Off-Canvas Filter</a></li>
-                                                    <li><a href="shop-right-sidebar.html">Right Toggle Sidebar</a></li>
+                                                    <li><a asp-controller="Categories" asp-action="OffCanvasFilter">Off-Canvas Filter</a></li>
+                                                    <li><a asp-controller="Categories" asp-action="RightToggleSidebar">Right Toggle Sidebar</a></li>
                                                 </ul>
                                             </div>
                                             <div class="col-6 col-sm-4 col-md-3 col-lg-4">
@@ -236,16 +237,16 @@
                                                 <ul>
 
                                                     <li>
-                                                        <a href="shop-grid-3cols.html">
+                                                        <a asp-controller="Categories" asp-action="ThreeColumnsMode">
                                                             3 Columns Mode<span class="tip tip-new">New</span>
                                                         </a>
                                                     </li>
-                                                    <li><a href="shop-grid-4cols.html">4 Columns Mode</a></li>
-                                                    <li><a href="shop-grid-5cols.html">5 Columns Mode</a></li>
-                                                    <li><a href="shop-grid-6cols.html">6 Columns Mode</a></li>
-                                                    <li><a href="shop-grid-7cols.html">7 Columns Mode</a></li>
-                                                    <li><a href="shop-grid-8cols.html">8 Columns Mode</a></li>
-                                                    <li><a href="shop-list.html">List Mode</a></li>
+                                                    <li><a asp-controller="Categories" asp-action="FourColumnsMode">4 Columns Mode</a></li>
+                                                    <li><a asp-controller="Categories" asp-action="FiveColumnsMode">5 Columns Mode</a></li>
+                                                    <li><a asp-controller="Categories" asp-action="SixColumnsMode">6 Columns Mode</a></li>
+                                                    <li><a asp-controller="Categories" asp-action="SevenColumnsMode">7 Columns Mode</a></li>
+                                                    <li><a asp-controller="Categories" asp-action="EightColumnsMode">8 Columns Mode</a></li>
+                                                    <li><a asp-controller="Categories" asp-action="ListMode">List Mode</a></li>
                                                 </ul>
                                             </div>
                                             <div class="col-6 col-sm-4 col-md-3 col-lg-4 menu-banner menu-banner1 banner banner-fixed">
@@ -414,7 +415,7 @@
                 <div class="footer-top">
                     <div class="row align-items-center">
                         <div class="col-lg-3">
-                            <a asp-action="Index" class="logo-footer">
+                            <a asp-controller="Home" asp-action="Index" class="logo-footer">
                                 <img src="~/images/logo-footer.png" alt="logo-footer" width="154" height="43" />
                             </a>
                             <!-- End Footer
@@ -805,11 +806,13 @@
 
     <!-- Plugins JS File -->
     <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/sticky/sticky.min.js"></script>
     <script src="~/vendor/parallax/parallax.min.js"></script>
     <script src="~/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="~/vendor/elevatezoom/jquery.elevatezoom.min.js"></script>
     <script src="~/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="~/vendor/owl-carousel/owl.carousel.min.js"></script>
+    <script src="vendor/nouislider/nouislider.min.js"></script>
     <!-- Main JS File -->
     <script src="~/js/main.min.js"></script>
 </body>
