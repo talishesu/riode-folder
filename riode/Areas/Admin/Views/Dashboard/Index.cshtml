@@ -1,0 +1,29 @@
+﻿@model List<riode.Models.Entities.Contact>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="padding:0;margin-left:240px" class="container d-flex flex-column align-items-center justify-content-around">
+    <h1>Comments</h1>
+    <div class="container">
+        @foreach (var contact in Model)
+        {
+            <div class="card">
+                <h5 class="card-header">Name: @contact.Name</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Email: @contact.Email</h5>
+                    <p class="card-text">Comment: @contact.Comment</p>
+                    <p class="card-text">Created Date: @contact.CreatedDate</p>
+                    @if (contact.Answer != null)
+                    {
+                        <p class="card-text">@contact.AnswerDate</p>
+                        <p class="card-text">@contact.Answer</p>
+                    }
+                    <a href="#" class="btn btn-info">Answer</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
