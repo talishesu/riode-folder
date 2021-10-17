@@ -202,3 +202,6 @@ C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admi
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_AdminLayout.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Dashboard\Answer.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Dashboard\Detail.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brands\Index.cshtml.g.cs

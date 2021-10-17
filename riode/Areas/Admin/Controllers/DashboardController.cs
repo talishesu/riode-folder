@@ -21,5 +21,14 @@ namespace riode.Areas.Admin.Controllers
             var contact = db.Contacts.ToList();   
             return View(contact);
         }
+        public IActionResult Answer()
+        {
+            return View();
+        }
+        public IActionResult Detail()
+        {
+            var contact = db.Contacts.ToList();
+            return View(contact);
+        }
     }
 }
