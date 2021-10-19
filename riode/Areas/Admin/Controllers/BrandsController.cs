@@ -54,6 +54,10 @@ namespace riode.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            if (brand.DeletedDate != null)
+            {
+                return NotFound();
+            }
             return View(brand);
         }
 
@@ -63,6 +67,14 @@ namespace riode.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 var brand = await db.Brand.FirstOrDefaultAsync(b => b.Id == id);
+                if (brand == null)
+                {
+                    return NotFound();
+                }
+                if (brand.DeletedDate != null)
+                {
+                    return NotFound();
+                }
                 brand.Name = model.Name;
                 brand.Description = model.Description;
                 await db.SaveChangesAsync();
@@ -83,18 +95,30 @@ namespace riode.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            if (brand.DeletedDate != null)
+            {
+                return NotFound();
+            }
             return View(brand);
         }
 
         [HttpPost]
         [ActionName("Delete")]
-        public async Task<IActionResult> Delete2([FromRoute] int id)
+        public async Task<IActionResult> DeletePost([FromRoute] int id)
         {
                 if (id < 1)
                 {
                     return NotFound();
                 }
                 var brand = await db.Brand.FirstOrDefaultAsync(b => b.Id == id);
+                if (brand == null)
+                {
+                    return NotFound();
+                }
+                if (brand.DeletedDate != null)
+                {
+                    return NotFound();
+                }
                 brand.DeletedDate = DateTime.Now;
                 await db.SaveChangesAsync();
 
@@ -108,6 +132,14 @@ namespace riode.Areas.Admin.Controllers
                 return NotFound();
             }
             var brand = await db.Brand.FirstOrDefaultAsync(b => b.Id == id);
+            if (brand == null)
+            {
+                return NotFound();
+            }
+            if (brand.DeletedDate != null)
+            {
+                return NotFound();
+            }
             return View(brand);
         }
 
