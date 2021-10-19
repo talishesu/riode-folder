@@ -14,5 +14,6 @@ namespace riode.Models.DataContexts
 
         }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Brands> Brand { get; set; }
     }
 }

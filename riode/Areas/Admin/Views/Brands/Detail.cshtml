@@ -1,0 +1,34 @@
+﻿@model riode.Models.Entities.Brands
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div style="padding:0;margin-left:240px">
+    <div class="card">
+        <div class="card-block table-border-style">
+            <div class="table-responsive">
+                <table class="table table-inverse">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Created Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">@Model.Id</th>
+                            <td>@Model.Name</td>
+                            <td>@Model.Description</td>
+                            <td>@Model.CreatedDate</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

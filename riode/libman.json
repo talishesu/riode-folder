@@ -9,6 +9,14 @@
     {
       "library": "toastr.js@2.1.4",
       "destination": "wwwroot/lib/toastr.js/"
+    },
+    {
+      "library": "fontawesome-iconpicker@3.2.0",
+      "destination": "wwwroot/lib/fontawesome-iconpicker/"
+    },
+    {
+      "library": "bootstrap-icons@1.6.1",
+      "destination": "wwwroot/lib/bootstrap-icons/"
     }
   ]
 }
