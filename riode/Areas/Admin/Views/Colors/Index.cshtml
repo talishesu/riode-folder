@@ -1,0 +1,50 @@
+﻿@model List<riode.Models.Entities.Colors>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="padding:0;margin-left:240px">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5>Colors</h5>
+            <br />
+            <a asp-controller="Colors" asp-action="Create" class="btn btn-out btn-success btn-square">
+                Create
+            </a>
+        </div>
+        <div class="card-block table-border-style">
+            <div class="table-responsive">
+                <table class="table table-inverse">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Created Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            if (item.DeletedDate == null)
+                            {
+
+                                <tr>
+                                    <th scope="row">@item.Id</th>
+                                    <td>@item.Name</td>
+                                    <td>@item.CreatedDate</td>
+                                    <td>
+                                        <a asp-route-id="@item.Id" asp-controller="Colors" asp-action="Detail"><img style="width: 25px; height: 25px; margin: 20px" src="https://img.icons8.com/ios-glyphs/30/000000/visible--v1.png" /></a>
+                                        <a asp-route-id="@item.Id" asp-controller="Colors" asp-action="Edit"><img style="width: 25px; height: 25px; margin: 20px" src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-pen-interface-kiranshastry-solid-kiranshastry.png" /></a>
+                                        <a asp-route-id="@item.Id" asp-controller="Colors" asp-action="Delete"><img style="width: 25px; height: 25px; margin: 20px" src="https://img.icons8.com/dotty/80/000000/trash.png" /></a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
