@@ -219,3 +219,4 @@ C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admi
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Colors\Edit.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Colors\Delete.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Colors\Detail.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Categories\Index.cshtml.g.cs

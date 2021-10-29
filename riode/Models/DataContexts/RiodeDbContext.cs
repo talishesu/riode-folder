@@ -17,5 +17,6 @@ namespace riode.Models.DataContexts
         public DbSet<Brands> Brand { get; set; }
         public DbSet<Sizes> Size { get; set; }
         public DbSet<Colors> Color { get; set; }
+        public DbSet<Categories> Category { get; set; }
     }
 }

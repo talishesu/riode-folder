@@ -12,6 +12,7 @@
                     <thead>
                         <tr>
                             <th>#</th>
+                            <th>Color</th>
                             <th>Name</th>
                             <th>Color Code</th>
                             <th>Created Date</th>
@@ -20,6 +21,7 @@
                     <tbody>
                         <tr>
                             <th scope="row">@Model.Id</th>
+                            <td><div style="background-color:@Model.ColorCode;width:20px;height:20px;"></div></td>
                             <td>@Model.Name</td>
                             <td>@Model.ColorCode</td>
                             <td>@Model.CreatedDate</td>
