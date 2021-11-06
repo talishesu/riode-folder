@@ -13,10 +13,11 @@ namespace riode.Models.Entities
         [Required(ErrorMessage = "Ad Bos Buraxila Bilmez")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "Category Hansi Tip Oldugu Secilmeildir")]
-        public bool BigCategory { get; set; }
+        public virtual Categories BigCategory { get; set; }
 
         public int? BigCategoryId { get; set; }
+
+        public virtual ICollection<Categories> Children { get; set; }
 
         public DateTime CreatedDate { get; set; } = DateTime.Now;
 

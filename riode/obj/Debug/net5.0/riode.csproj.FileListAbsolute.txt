@@ -205,7 +205,6 @@ C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admi
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Dashboard\Detail.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brands\Index.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brands\Create.cshtml.g.cs
-C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\riode.csproj.AssemblyReference.cache
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brands\Edit.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brands\Delete.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Brands\Detail.cshtml.g.cs
@@ -220,3 +219,6 @@ C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admi
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Colors\Delete.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Colors\Detail.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Categories\Index.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Categories\Create.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Categories\Delete.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\riode.csproj.AssemblyReference.cache
