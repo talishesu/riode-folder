@@ -1,6 +1,7 @@
 ﻿@model List<riode.Models.Entities.Contact>
 @{
     ViewData["Title"] = "Index";
+    Model.Reverse();
 }
 
 <div style="padding:0;margin-left:240px" class="container d-flex flex-column align-items-center justify-content-around">
@@ -19,12 +20,12 @@
                         <p class="card-text">Answer Date: @contact.AnswerDate</p>
                         <p class="card-text">Answer: @contact.Answer</p>
                     }
-                    @if (contact.Answer != null) {
-                        <a asp-area="Admin" asp-controller="Dashboard" asp-action="Answer" class="btn btn-info">Answer</a>
+                    @if (contact.Answer == null) {
+                        <a asp-route-id="@contact.Id" asp-area="Admin" asp-controller="Dashboard" asp-action="Answer" class="btn btn-info">Answer</a>
                     } else { 
-                        <a asp-area="Admin" asp-controller="Dashboard" asp-action="AnswerUpdate" class="btn btn-info">Answer Update</a>
+                        <a asp-route-id="@contact.Id" asp-area="Admin" asp-controller="Dashboard" asp-action="Answer" class="btn btn-info">Answer Update</a>
                     }
-                    <a asp-area="Admin" asp-controller="Dashboard" asp-action="Detail" class="btn btn-danger">Detail</a>
+                    <a asp-route-id="@contact.Id" asp-area="Admin" asp-controller="Dashboard" asp-action="Detail" class="btn btn-danger">Detail</a>
                 </div>
             </div>
         }

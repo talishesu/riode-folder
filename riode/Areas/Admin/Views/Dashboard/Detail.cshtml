@@ -1,10 +1,25 @@
-﻿@model List<riode.Models.Entities.Contact>
+﻿@model riode.Models.Entities.Contact
 
 @{
     ViewData["Title"] = "Detail";
 }
 
 <div style="padding:0;margin-left:240px" class="container d-flex flex-column align-items-center justify-content-around">
-    <h1>Comment Detail</h1>
+    <h1>Answer</h1>
+    <h5>@Model.Answer</h5>
+    <h1>AnswerDate</h1>
+    <h5>@Model.AnswerDate</h5>
+    <h1>AnsweredByUserId</h1>
+    <h5>@Model.AnsweredByUserId</h5>
+    <h1>Comment</h1>
+    <h5>@Model.Comment</h5>
+    <h1>CreatedDate</h1>
+    <h5>@Model.CreatedDate</h5>
+    <h1>Email</h1>
+    <h5>@Model.Email</h5>
+    <h1>Id</h1>
+    <h5>@Model.Id</h5>
+    <h1>Name</h1>
+    <h5>@Model.Name</h5>
 </div>
 
