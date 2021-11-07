@@ -160,6 +160,60 @@ namespace riode.Migrations
                     b.ToTable("Size");
                 });
 
+            modelBuilder.Entity("riode.Models.Entities.Specification", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("CreatedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("DeletedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Specifications");
+                });
+
+            modelBuilder.Entity("riode.Models.Entities.SpecificationCategoryItem", b =>
+                {
+                    b.Property<int>("SpecificationId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CreatedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("DeletedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("SpecificationId", "CategoryId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("SpecificationCategoryCollection");
+                });
+
             modelBuilder.Entity("riode.Models.Entities.Categories", b =>
                 {
                     b.HasOne("riode.Models.Entities.Categories", "BigCategory")
@@ -167,6 +221,25 @@ namespace riode.Migrations
                         .HasForeignKey("BigCategoryId");
 
                     b.Navigation("BigCategory");
+                });
+
+            modelBuilder.Entity("riode.Models.Entities.SpecificationCategoryItem", b =>
+                {
+                    b.HasOne("riode.Models.Entities.Categories", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("riode.Models.Entities.Specification", "Spesification")
+                        .WithMany()
+                        .HasForeignKey("SpecificationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Spesification");
                 });
 
             modelBuilder.Entity("riode.Models.Entities.Categories", b =>

@@ -14,13 +14,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 2 "C:\Users\quliy\source\repos\riode-folder\riode\Areas\Admin\Views\_ViewImports.cshtml"
+using riode.AppCode.Extensions;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\quliy\source\repos\riode-folder\riode\Areas\Admin\Views\_ViewImports.cshtml"
 using riode;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"32232daf511f61a6c84c8f96048497290d4d65ee", @"/Areas/Admin/Views/Sizes/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e276d9991432e7b1106ea422e300a0132089e73f", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a56e9c2efc69d5fb98da8eacaf59aef435e7c7ae", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_Sizes_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<riode.Models.Entities.Sizes>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Sizes", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -62,7 +69,7 @@ using riode;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<div style=\"padding:0;margin-left:240px\">\r\n    <div class=\"card\">\r\n        <div class=\"card-header d-flex justify-content-between align-items-center\">\r\n            <h5>Sizes</h5>\r\n            <br />\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "32232daf511f61a6c84c8f96048497290d4d65ee5281", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "32232daf511f61a6c84c8f96048497290d4d65ee5479", async() => {
                 WriteLiteral("\r\n                Create\r\n            ");
             }
             );
@@ -131,7 +138,7 @@ using riode;
 #line hidden
 #nullable disable
             WriteLiteral("</td>\r\n                                    <td>\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "32232daf511f61a6c84c8f96048497290d4d65ee8682", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "32232daf511f61a6c84c8f96048497290d4d65ee8880", async() => {
                 WriteLiteral("<img style=\"width: 25px; height: 25px; margin: 20px\" src=\"https://img.icons8.com/ios-glyphs/30/000000/visible--v1.png\" />");
             }
             );
@@ -164,7 +171,7 @@ using riode;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "32232daf511f61a6c84c8f96048497290d4d65ee11206", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "32232daf511f61a6c84c8f96048497290d4d65ee11404", async() => {
                 WriteLiteral("<img style=\"width: 25px; height: 25px; margin: 20px\" src=\"https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-pen-interface-kiranshastry-solid-kiranshastry.png\" />");
             }
             );
@@ -197,7 +204,7 @@ using riode;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "32232daf511f61a6c84c8f96048497290d4d65ee13804", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "32232daf511f61a6c84c8f96048497290d4d65ee14002", async() => {
                 WriteLiteral("<img style=\"width: 25px; height: 25px; margin: 20px\" src=\"https://img.icons8.com/dotty/80/000000/trash.png\" />");
             }
             );

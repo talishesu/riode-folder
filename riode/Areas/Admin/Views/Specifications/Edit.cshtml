@@ -1,0 +1,152 @@
+﻿@model riode.Models.ViewModels.SpecificationViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="page-header">
+    <div class="row align-items-end">
+        <div class="col-lg-8">
+            <div class="page-header-title">
+                <div class="d-inline">
+                    <h4>Specifications</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="page-header-breadcrumb">
+                <ul class="breadcrumb-title">
+                    <li class="breadcrumb-item" style="float: left;">
+                        <a asp-controller="Dashboard" asp-action="Index"> <i class="feather icon-home"></i> </a>
+                    </li>
+                    <li class="breadcrumb-item" style="float: left;"><a asp-action="Index">Specifications</a> </li>
+                    <li class="breadcrumb-item" style="float: left;">Cari brend`i readaktə etmək</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-body">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="card">
+                <div class="card-block">
+                    <h4 class="sub-title">Cari brend`i readaktə etmək</h4>
+                    <form method="post" id="specificationForm">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label required" asp-for="Specification.Name"></label>
+                            <div class="col-sm-10">
+                                <input class="form-control" placeholder="Specification adını daxil edin" asp-for="Specification.Name" />
+                                <span asp-validation-for="Specification.Name" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <div class="tab-control" role="tabcontrol">
+                                    <div id="categories" class="tab-page" aria-title="Kateqoriyalar" selected>
+                                        <table class="table tree">
+                                            <thead>
+                                                <tr>
+                                                    <th class="row-identifier"></th>
+                                                    <th>Name</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Categories.Where(c => c.Item1.BigCategoryId == null))
+                                                {
+                                                    <tr class="treegrid-@item.Item1.Id">
+                                                        <th class="row-identifier">
+                                                            <input data-category-id="@item.Item1.Id" type="checkbox" @(item.Item2 ? "checked" : "") />
+                                                        </th>
+                                                        <td>@item.Item1.Name</td>
+                                                    </tr>
+
+                                                    foreach (var child in item.Item1.GetChildCategories())
+                                                    {
+                                                        var isSelected = (Model.Categories.FirstOrDefault(c => c.Item1.Id == child.Id)?.Item2 ?? false);
+                                                        <tr class="treegrid-@child.Id treegrid-parent-@child.BigCategoryId">
+                                                            <th class="row-identifier">
+                                                                <input data-category-id="@child.Id" type="checkbox" @(isSelected ? "checked" : "") />
+                                                            </th>
+                                                            <td>@child.Name</td>
+                                                        </tr>
+                                                    }
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <input type="hidden" asp-for="Specification.Id" />
+                                <a class="btn btn-info btn-square" asp-action="Index">
+                                    Siyahıya qayıt
+                                </a>
+                                <button class="btn btn-warning btn-square" type="submit">
+                                    Redaktə et
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section addcss{
+    <link href="~/lib/jquery-treegrid/css/jquery.treegrid.min.css" rel="stylesheet" />
+    <link href="~/lib/tab-control/tab-control.css" rel="stylesheet" />
+}
+@section addjs{
+    <script src="~/lib/jquery-treegrid/js/jquery.treegrid.min.js"></script>
+    <script src="~/lib/tab-control/tab-control.js"></script>
+
+    <script>
+      $(document).ready(function () {
+          $('.tree').treegrid();
+
+          $('#specificationForm').submit(function (e) {
+              e.preventDefault();
+
+              let formData = new FormData(e.currentTarget);
+
+              $('input[data-category-id]:checked').each(function (index, item) {
+                  formData.append(`SelectedCategories[]`, $(item).data('category-id'));
+              });
+
+              $.ajax({
+                  url: window.location.href,
+                  type: 'POST',
+                  data: formData,
+                  contentType: false,
+                  processData: false,
+                  dataType:'json',
+                  success: function (response) {
+                      if (response.error == false) {
+                          window.location.href = '@Url.Action("Index")';
+                      }
+                  }
+              })
+          });
+
+          $('input[data-category-id]').unbind().change(function (e) {
+              let selector = $(e.currentTarget).closest('tr').attr('class').split(' ').filter(item => {
+                  return /^\w+-\d+$/.test(item);
+              }).map(c => {
+                  let result = /^(\w+)-(\d+)$/.exec(c);
+
+                  return `${result[1]}-parent-${result[2]}`
+              })[0];
+
+              let state = $(e.currentTarget).is(':checked');
+              $(`.${selector} input[data-category-id]`).prop('checked', state).change();
+          });
+      });
+    </script>
+} 
