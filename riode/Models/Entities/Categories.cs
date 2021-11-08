@@ -18,6 +18,7 @@ namespace riode.Models.Entities
         public int? BigCategoryId { get; set; }
 
         public virtual ICollection<Categories> Children { get; set; }
+        public virtual ICollection<ProductCategoryItem> ProductItems { get; set; }
 
         public DateTime CreatedDate { get; set; } = DateTime.Now;
 

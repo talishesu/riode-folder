@@ -20,14 +20,27 @@ namespace riode.Models.DataContexts
         public DbSet<Categories> Category { get; set; }
         public DbSet<Specification> Specifications { get; set; }
         public DbSet<SpecificationCategoryItem> SpecificationCategoryCollection { get; set; }
+        public DbSet<Products> Products { get; set; }
+        public DbSet<ProductCategoryItem> ProductCategoryCollection { get; set; }
+        public DbSet<SpecificationProductItem> SpecificationProductCollection { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<SpecificationCategoryItem>(e=> {
+            modelBuilder.Entity<SpecificationCategoryItem>(e => {
 
                 e.HasKey(k => new { k.SpecificationId, k.CategoryId });
+            });
+
+            modelBuilder.Entity<ProductCategoryItem>(e => {
+
+                e.HasKey(k => new { k.CategoryId, k.ProductId });
+            });
+
+            modelBuilder.Entity<SpecificationProductItem>(e => {
+
+                e.HasKey(k => new { k.SpecificationId, k.ProductId });
             });
         }
 
