@@ -107,6 +107,7 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="wwwroot\lib\multiple-imager-js\img\" />
   </ItemGroup>
 
   <ItemGroup>

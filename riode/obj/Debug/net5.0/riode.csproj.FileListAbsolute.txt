@@ -226,3 +226,4 @@ C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admi
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Specifications\Details.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Specifications\Edit.cshtml.g.cs
 C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Specifications\Index.cshtml.g.cs
+C:\Users\quliy\source\repos\riode-folder\riode\obj\Debug\net5.0\Razor\Areas\Admin\Views\Products\Create.cshtml.g.cs

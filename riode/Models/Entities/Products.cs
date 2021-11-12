@@ -1,7 +1,9 @@
-﻿using riode.AppCode.Infrastructure;
+﻿using Microsoft.AspNetCore.Http;
+using riode.AppCode.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -18,6 +20,9 @@ namespace riode.Models.Entities
         public virtual ICollection<ProductImage> Images { get; set; }
         public virtual ICollection<SpecificationProductItem> SpecificationItems { get; set; }
         public virtual ICollection<ProductCategoryItem> CategoryItems { get; set; }
+
+        [NotMapped]
+        public ImageItem[] Files  { get; set; }
     }
     public class ProductImage:BaseEntity
     {
@@ -40,5 +45,12 @@ namespace riode.Models.Entities
         public virtual Products Product { get; set; }
         public int CategoryId { get; set; }
         public virtual Categories Category { get; set; }
+    }
+    public class ImageItem
+    {
+        public int? Id { get; set; }
+        public bool IsMain { get; set; }
+        public string TempPath { get; set; }
+        public IFormFile File { get; set; }
     }
 }
