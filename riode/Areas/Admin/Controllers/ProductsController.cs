@@ -58,12 +58,12 @@ namespace riode.Areas.Admin.Controllers
 
             foreach (var image in model.Files)
             {
-                var extension = Path.GetExtension(image.File.Name);
+                var extension = Path.GetExtension(image.File.FileName);
 
                 var fileName = $"product-{Guid.NewGuid()}{extension}".ToLower();
 
 
-                var phsicalPath = Path.Combine(env.ContentRootPath, "wwwroot", "uploads", "products", fileName);
+                var phsicalPath = Path.Combine(env.WebRootPath, "uploads", "products", "images", fileName);
 
                 using (var fs = new FileStream(phsicalPath, FileMode.Create, FileAccess.Write))
                 {

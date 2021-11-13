@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using riode.AppCode.Providers;
 using riode.Models.DataContexts;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace riode
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(cfg=>cfg.ModelBinderProviders.Insert(0,new BooleanBinderProvider()));
             services.AddRouting(cfg =>
             {
                 cfg.LowercaseUrls = true;
