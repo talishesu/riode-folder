@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\quliy\\source\\repos\\riode-folder\\riode\\riode.csproj": {}
+    "C:\\Users\\TUF GAMING\\source\\repos\\riode-folder\\riode\\riode.csproj": {}
   },
   "projects": {
-    "C:\\Users\\quliy\\source\\repos\\riode-folder\\riode\\riode.csproj": {
+    "C:\\Users\\TUF GAMING\\source\\repos\\riode-folder\\riode\\riode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\quliy\\source\\repos\\riode-folder\\riode\\riode.csproj",
+        "projectUniqueName": "C:\\Users\\TUF GAMING\\source\\repos\\riode-folder\\riode\\riode.csproj",
         "projectName": "riode",
-        "projectPath": "C:\\Users\\quliy\\source\\repos\\riode-folder\\riode\\riode.csproj",
-        "packagesPath": "C:\\Users\\quliy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\quliy\\source\\repos\\riode-folder\\riode\\obj\\",
+        "projectPath": "C:\\Users\\TUF GAMING\\source\\repos\\riode-folder\\riode\\riode.csproj",
+        "packagesPath": "C:\\Users\\TUF GAMING\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TUF GAMING\\source\\repos\\riode-folder\\riode\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\quliy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\TUF GAMING\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

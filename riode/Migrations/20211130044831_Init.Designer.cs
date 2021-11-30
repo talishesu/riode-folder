@@ -10,8 +10,8 @@ using riode.Models.DataContexts;
 namespace riode.Migrations
 {
     [DbContext(typeof(RiodeDbContext))]
-    [Migration("20211107065938_SpecifactionAdded")]
-    partial class SpecifactionAdded
+    [Migration("20211130044831_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -136,6 +136,109 @@ namespace riode.Migrations
                     b.ToTable("Contacts");
                 });
 
+            modelBuilder.Entity("riode.Models.Entities.ProductCategoryItem", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CreatedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("DeletedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("CategoryId", "ProductId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductCategoryCollection");
+                });
+
+            modelBuilder.Entity("riode.Models.Entities.ProductImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("CreatedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("DeletedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ImagePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsMain")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductImage");
+                });
+
+            modelBuilder.Entity("riode.Models.Entities.Products", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BrandId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CreatedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("DeletedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ShortDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StockKeepingUnit")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BrandId");
+
+                    b.ToTable("Products");
+                });
+
             modelBuilder.Entity("riode.Models.Entities.Sizes", b =>
                 {
                     b.Property<int>("Id")
@@ -216,6 +319,36 @@ namespace riode.Migrations
                     b.ToTable("SpecificationCategoryCollection");
                 });
 
+            modelBuilder.Entity("riode.Models.Entities.SpecificationProductItem", b =>
+                {
+                    b.Property<int>("SpecificationId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CreatedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("DeletedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SpecificationId", "ProductId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("SpecificationProductCollection");
+                });
+
             modelBuilder.Entity("riode.Models.Entities.Categories", b =>
                 {
                     b.HasOne("riode.Models.Entities.Categories", "BigCategory")
@@ -223,6 +356,47 @@ namespace riode.Migrations
                         .HasForeignKey("BigCategoryId");
 
                     b.Navigation("BigCategory");
+                });
+
+            modelBuilder.Entity("riode.Models.Entities.ProductCategoryItem", b =>
+                {
+                    b.HasOne("riode.Models.Entities.Categories", "Category")
+                        .WithMany("ProductItems")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("riode.Models.Entities.Products", "Product")
+                        .WithMany("CategoryItems")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("riode.Models.Entities.ProductImage", b =>
+                {
+                    b.HasOne("riode.Models.Entities.Products", "Product")
+                        .WithMany("Images")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("riode.Models.Entities.Products", b =>
+                {
+                    b.HasOne("riode.Models.Entities.Brands", "Brand")
+                        .WithMany()
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Brand");
                 });
 
             modelBuilder.Entity("riode.Models.Entities.SpecificationCategoryItem", b =>
@@ -244,9 +418,39 @@ namespace riode.Migrations
                     b.Navigation("Spesification");
                 });
 
+            modelBuilder.Entity("riode.Models.Entities.SpecificationProductItem", b =>
+                {
+                    b.HasOne("riode.Models.Entities.Products", "Product")
+                        .WithMany("SpecificationItems")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("riode.Models.Entities.Specification", "Specification")
+                        .WithMany()
+                        .HasForeignKey("SpecificationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("Specification");
+                });
+
             modelBuilder.Entity("riode.Models.Entities.Categories", b =>
                 {
                     b.Navigation("Children");
+
+                    b.Navigation("ProductItems");
+                });
+
+            modelBuilder.Entity("riode.Models.Entities.Products", b =>
+                {
+                    b.Navigation("CategoryItems");
+
+                    b.Navigation("Images");
+
+                    b.Navigation("SpecificationItems");
                 });
 #pragma warning restore 612, 618
         }
