@@ -10,7 +10,7 @@ using riode.Models.DataContexts;
 namespace riode.Migrations
 {
     [DbContext(typeof(RiodeDbContext))]
-    [Migration("20211130044831_Init")]
+    [Migration("20211202041400_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
