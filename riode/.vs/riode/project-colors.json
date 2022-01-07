@@ -5,6 +5,11 @@
       "ProjectGuid": "f6c83095-9a4b-41f9-9d44-4578b3f5664b",
       "DisplayName": "riode",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1
